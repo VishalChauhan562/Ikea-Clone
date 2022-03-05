@@ -6,13 +6,22 @@ import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import CameraAltOutlinedIcon from '@mui/icons-material/CameraAltOutlined';
 import styles from "./Css/Navbar.module.css";
+import { Context } from '../Context';
+import { useNavigate } from 'react-router-dom';
 
 export const Navbar = () => {
+
+    const { open, setOpen, setSideMenuValue } = React.useContext(Context);
+    const navigate = useNavigate();
+
     return (
-        <div style={{ marginTop: "1rem" }}>
+        <div className={styles.first_container}>
             <div className={styles.grid}>
                 <div className={styles.flex_left}>
-                    <div className={styles.hamburger1}>
+                    <div className={styles.hamburger1} onClick={() => {
+                        setSideMenuValue("Navbar")
+                        setOpen(!open)
+                    }}>
 
                         <MenuRoundedIcon />
                     </div>
@@ -32,8 +41,8 @@ export const Navbar = () => {
                         <LocalShippingOutlinedIcon />
                     </div>
                     <PersonOutlineOutlinedIcon />
-                    <ShoppingBagOutlinedIcon />
-                    <div className={styles.hamburger2}>
+                    <ShoppingBagOutlinedIcon onClick={() => navigate("/cart")} style={{ cursor: "pointer" }} />
+                    <div className={styles.hamburger2} onClick={() => setOpen(!open)}>
 
                         <MenuRoundedIcon />
                     </div>

@@ -2,10 +2,13 @@ import React from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import styles from '../Css/InfoProduct.module.css';
 import { ReadMore } from '../Css/Readmore';
+import { Context } from '../../Context';
 
-export const InfoProduct = () => {
+export const InfoProduct = ({ singleProduct }) => {
 
-    const productLinks = ["Product Details", "Measurements", "Reviews"]
+    const productLinks = ["Product Details", "Measurements", "Reviews"];
+    const { open, setOpen, setSideMenuValue } = React.useContext(Context);
+
 
     return (
         <div className={styles.starter}>
@@ -20,7 +23,10 @@ export const InfoProduct = () => {
                 {productLinks.map((link) => (
                     // console.log(link)
                     <div className={styles.div_flex}>
-                        <h2 className={styles.h2_text}>{link}</h2>
+                        <h2 className={styles.h2_text} onClick={() => {
+                            setSideMenuValue(singleProduct)
+                            setOpen(!open)
+                        }}>{link}</h2>
                         <ArrowForwardIcon />
                     </div>
                 ))}

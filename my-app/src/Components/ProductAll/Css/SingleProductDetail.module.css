@@ -102,6 +102,7 @@
   font-size: 1rem;
   font-weight: bold;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .measure {
@@ -110,7 +111,22 @@
   place-items: center;
   padding: 1rem 1rem;
 }
-
+.go_to_cart {
+  background-color: transparent;
+  border-radius: 50px;
+  color: black;
+  padding: 0.5rem;
+  margin-left: 2rem;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.go_to_cart_disable {
+  background-color: #dfdfdf;
+  border-radius: 50px;
+  color: black;
+  padding: 0.5rem;
+  margin-left: 2rem;
+}
 @media only screen and (max-width: 900px) {
   .starter {
     margin-left: 2rem;

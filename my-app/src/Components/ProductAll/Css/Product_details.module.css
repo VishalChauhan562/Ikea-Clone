@@ -35,7 +35,11 @@
 .product_img {
   height: 20rem;
   width: 22rem;
+  /* transition: 10.5s; */
 }
+/* .product_img:hover {
+  transition: 10.5s;
+} */
 .c {
   color: black;
   display: flex;

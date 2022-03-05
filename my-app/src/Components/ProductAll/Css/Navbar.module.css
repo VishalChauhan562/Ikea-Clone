@@ -4,6 +4,14 @@
   gap: 3rem;
 }
 
+.first_container {
+  margin-left: 1rem;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding-top: 1.5rem;
+  background-color: white;
+}
 .flex_left {
   gap: 5rem;
   display: flex;
@@ -21,6 +29,9 @@
 }
 .hamburger2 {
   display: none;
+}
+.hamburger1 {
+  cursor: pointer;
 }
 
 .search_icon {
@@ -91,6 +102,7 @@
   }
   .hamburger2 {
     display: block;
+    cursor: pointer;
   }
 }
 

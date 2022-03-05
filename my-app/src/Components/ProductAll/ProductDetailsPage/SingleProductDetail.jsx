@@ -1,6 +1,6 @@
 import { Rating } from '@mui/material';
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { SetGetAPI } from '../../../JS/SetGetAPI';
 import { Context } from '../../Context';
 import StraightenIcon from '@mui/icons-material/Straighten';
@@ -9,18 +9,34 @@ import { InfoProduct } from './InfoProduct';
 
 export const SingleProductDetail = () => {
 
-    const { singleProduct } = React.useContext(Context);
+    const { singleProduct, toCart, setToCart } = React.useContext(Context);
     const id = useParams();
 
     const { getAPiSingle } = SetGetAPI();
+    const navigate = useNavigate();
 
-    console.log(id.id);
+    // console.log(id.id);
 
 
     React.useEffect(() => {
         getAPiSingle(fetch(`http://localhost:3000/WFH/${id.id}`));
 
-    }, [])
+    }, []);
+
+    const checkInCart = () => {
+        let check = toCart.filter(item => item.id === singleProduct.id);
+        return check.length;
+    }
+    const handleAddCart = () => {
+        let check = toCart.filter(item => item.id === singleProduct.id);
+        // setToCart([])
+        if (check.length === 0) {
+            setToCart([...toCart, singleProduct]);
+        } else {
+            alert("Product is Already in Cart");
+        }
+        console.log(toCart);
+    }
 
     return (
         <div className={styles.starter}>
@@ -45,12 +61,17 @@ export const SingleProductDetail = () => {
                             <input type="text" placeholder="40001" />
                             <input type="submit" value="Check" />
                         </form>
-                        <button className={styles.button_to_cart}> Add to cart</button>
+                        <button className={styles.button_to_cart} onClick={handleAddCart}>{checkInCart() === 0 ? "Add to cart" : "Added to cart"}</button>
                     </div>
 
                     <div className={styles.measure}>
                         <StraightenIcon />
                         <p style={{ marginLeft: "0.85rem", color: "#484848", fontSize: "1rem", borderBottom: "1px solid #484848" }}>Check in-store stock</p>
+                        <button className={toCart.length > 0 ? styles.go_to_cart : styles.go_to_cart_disable}
+                            disabled={toCart.length > 0 ? false : true} onClick={() => navigate("/cart")}
+                        >
+                            {toCart.length > 0 ? "Checkout the Cart" : "Add Something to the Cart"}
+                        </button>
                     </div>
                 </div>
             </div>

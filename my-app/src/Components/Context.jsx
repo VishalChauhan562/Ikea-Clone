@@ -8,8 +8,30 @@ export const ContextProvider = ({ children }) => {
     const [onHoverActiveContext, setOnHoverActiveContext] = React.useState(false);
     const [singleProduct, setSingleProduct] = React.useState([]);
     const [toCompare, setToCompare] = React.useState([]);
+    const [open, setOpen] = React.useState(false);
+    const [toCart, setToCart] = React.useState([]);
+    const [sideMenuValue, setSideMenuValue] = React.useState("");
+
+    const value = {
+        productData,
+        setProductData,
+        select,
+        setSelect,
+        toCompare,
+        setToCompare,
+        onHoverActiveContext,
+        setOnHoverActiveContext,
+        singleProduct,
+        setSingleProduct,
+        open,
+        setOpen,
+        toCart,
+        setToCart,
+        sideMenuValue,
+        setSideMenuValue
+    }
 
     return (
-        <Context.Provider value={{ productData, setProductData, select, setSelect, toCompare, setToCompare, onHoverActiveContext, setOnHoverActiveContext, singleProduct, setSingleProduct }}>{children}</Context.Provider>
+        <Context.Provider value={value}> {children}</Context.Provider >
     )
 }

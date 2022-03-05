@@ -78,11 +78,16 @@ li {
   display: flex;
   flex-wrap: nowrap;
   padding-top: 4rem;
+  width: 50%;
   overflow-x: auto;
 }
 
 @media only screen and (max-width: 1146px) {
   .starter {
     margin-left: 2rem;
+    /* width: 100%; */
+  }
+  .completeDiv {
+    width: 100%;
   }
 }
