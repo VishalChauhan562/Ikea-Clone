@@ -10,7 +10,7 @@ export const FetchAll = () => {
    const All = (category) => { 
     setLoading(true)
 
-        fetch(`https://fake-server-app5622.herokuapp.com/${category}`)
+        fetch(`http://localhost:8000/${category}`)
         .then((res) => res.json())
         .then((res) =>  {
             console.log("akash", res)
@@ -22,7 +22,7 @@ export const FetchAll = () => {
 
     useEffect(() => {
         setLoading(true)
-        fetch(`https://fake-server-app5622.herokuapp.com/${cate}`)
+        fetch(`http://localhost:8000/${cate}`)
         .then((res) => res.json())
         .then((res) =>  {
             console.log("akash", res)

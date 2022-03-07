@@ -19,7 +19,7 @@ export const SingleProductDetail = () => {
 
 
     React.useEffect(() => {
-        getAPiSingle(fetch(`https://fake-server-app5622.herokuapp.com/HAE/${id.id}`));
+        getAPiSingle(fetch(`http://localhost:8000/WFH/${id.id}`));
 
     }, []);
 
