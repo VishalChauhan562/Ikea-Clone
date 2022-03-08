@@ -11,7 +11,7 @@ import { CompareComponent } from './CompareComponent';
 export const CompareProducts = () => {
     const { toCompare, setOnHoverActiveContext, onHoverActiveContext } = React.useContext(Context);
     // const [wishlist, setWishlist] = React.useState(false);
-    const [setOnHoverActive] = React.useState(false);
+    const [onHoverActive,setOnHoverActive] = React.useState(false);
 
     React.useEffect(() => {
         if (onHoverActiveContext) {
