@@ -10,6 +10,7 @@ export const FetchAll = () => {
     const All = (category) => {
         setLoading(true)
 
+
         fetch(`https://fake-server-app5622.herokuapp.com/${category}`)
             .then((res) => res.json())
             .then((res) => {
@@ -18,16 +19,19 @@ export const FetchAll = () => {
                 setData(res)
                 setLoading(false)
             })
+
     }
 
     useEffect(() => {
         setLoading(true)
+
         fetch(`https://fake-server-app5622.herokuapp.com/${cate}`)
             .then((res) => res.json())
             .then((res) => {
                 // console.log("akash", res)
                 setData(res)
                 setLoading(false)
+
 
             })
     }, [])
