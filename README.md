@@ -23,8 +23,8 @@ Ikea.com is an E-commerce website from which user can purchase the items of the 
 <h2>Quick view of the project:</h2>
 1. The Landing Page
 <p></p>
-<img src="https://ibb.co/3NSp5zY" />
-<!-- <img src="https://user-images.githubusercontent.com/63180404/130653862-8fc0433e-d3d5-47ee-bf26-855550b6534a.png" /> -->
+<img src="https://drive.google.com/file/d/1EBju3udHWD2IHJokurf1Y3vQE6fx1_Iv/view?usp=sharing" />
+
 
 2. Home Page
 <br>
