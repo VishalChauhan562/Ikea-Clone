@@ -23,19 +23,19 @@ Ikea.com is an E-commerce website from which user can purchase the items of the 
 <h2>Quick view of the project:</h2>
 1. The Landing Page
 <p></p>
-<img src="https://drive.google.com/file/d/1EBju3udHWD2IHJokurf1Y3vQE6fx1_Iv/view?usp=sharing" />
+<img src="https://github.com/VishalChauhan562/Ikea-Clone/blob/main/my-app/Pics/LandingPage.png" />
 
 
 2. Home Page
 <br>
-<img src="https://ibb.co/dtGWg3Z" />
+<img src="https://github.com/VishalChauhan562/Ikea-Clone/blob/main/my-app/Pics/HomePage.png" />
 
 3. Product Page
 <br>
-<img src="https://ibb.co/gmNMmZd" />
+<img src="https://github.com/VishalChauhan562/Ikea-Clone/blob/main/my-app/Pics/Product.png" />
 
 4. About Page
 <br>
-<img src="https://ibb.co/mJ83cdc" />
+<img src="https://github.com/VishalChauhan562/Ikea-Clone/blob/main/my-app/Pics/AboutPage.png" />
 
 ### Thanks 😊.
