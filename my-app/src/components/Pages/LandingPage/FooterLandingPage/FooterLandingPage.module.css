@@ -1,8 +1,8 @@
 .footerImage img{
     margin-top: 116px;
-    transform: scale(1.4);
-    margin-bottom: 35px;
-    overflow: hidden
+  
+    margin-bottom: 25px;
+  
 }
 .footerMain{
     display: flex ;
