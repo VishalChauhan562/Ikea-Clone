@@ -20,6 +20,18 @@ Ikea.com is an E-commerce website from which user can purchase the items of the 
   <li>Material UI</li>
 </ul>
 
+## Features:
+<ul>
+  <li>Search</li>
+  <li>Category-wise filter</li>
+  <li>Product comparison option</li>
+  <li>Add to cart</li>
+  <li>Login/Signup authentication</li>
+  <li>Order placing procedure</li>
+  <li>Payment option</li>
+  <li>Responsive</li>
+</ul>
+
 <h2>Quick view of the project:</h2>
 1. The Landing Page
 <p></p>
